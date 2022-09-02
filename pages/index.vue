@@ -3,9 +3,6 @@
     <section class="intro">
       <h1>Get the latest tech news!</h1>
     </section>
-    <!-- 3) Pass the loadedPosts array to the PostList component
-    as props, using data binding (:posts="loadedPosts").
-    Next Step in the PostList component -->
     <PostList :posts="loadedPosts" />
   </div>
 </template>
@@ -19,9 +16,6 @@ export default {
   },
   data() {
     return {
-      /* 2) Create an array of posts called loadedPosts, which we
-      will pass to the PostList component. For now, this array is
-      hardcoded, but eventually it will be added dynamically. */
       loadedPosts: [
         {
           id: '1',
