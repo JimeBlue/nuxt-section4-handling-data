@@ -1,6 +1,8 @@
 <template>
   <nuxt-link :to="postLink" class="post-preview">
     <article>
+      <!-- 9) Here I´m using in the
+      template the props I have accepted-->
       <div
         class="post-thumbnail"
         :style="{backgroundImage: 'url(' + thumbnail + ')'}"></div>
@@ -15,6 +17,8 @@
 <script>
 export default {
   name: 'PostPreview',
+  /* 8) Here I´m accepting all the props sent by
+  the PostList component. */
   props: {
     id: {
       type: String,
