@@ -22,7 +22,7 @@ export default {
       nuxt redirects us to that error page if an error
       ocurrs. */
       /* 3) It is important to mention that if instead of 
-      using  setTimeout we are using a promise, error
+      using a callback we are using a promise, error
       will be handled differently. But that we´ll be
       explained later.*/
       callback(new Error (), {
