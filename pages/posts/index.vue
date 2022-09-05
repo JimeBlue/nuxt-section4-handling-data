@@ -43,22 +43,12 @@ export default {
       context.error(e);
     });
   },
-  /* 12) In the created method, send the 
-  loadedPosts we fetched above to the vuex
-  store.*/
   created () {
   this.$store.dispatch("setPosts", this.loadedPosts)
   console.log(this.$store.getters.loadedPosts)
   }
 };
 
-/* 13) To see that it is working use the vue.js
-chrome extension. Go to components > Root >
-Default > Nuxt > PagesPostsIndex.vue, on the 
-left side, under data, I will see that the data
-I´m using is the loadedPosts array.
-If I don´t have the vue.js chrome extension, I can
-simply console.log(this.$store.getters.loadedPosts) */
 </script>
 
 <style scoped>
