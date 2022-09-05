@@ -15,17 +15,6 @@ export default {
     PostList
   },
   asyncData(context, callback) {
-    /* console log the context object to see what
-    it includes. If we refresh the page and go to
-    the main page, we won´t see the console log 
-    because the data was loaded in the server not in
-    the browser. To see it, we have to go to the 
-    terminal of vs code. But, if we now are in the
-    main page, navigate to another page and go
-    back to the main page, we´ll be able to
-    see the  context object with all its properties
-    in the console. */
-    console.log(context)
     setTimeout(() => {
       callback(null, {
         loadedPosts: [
