@@ -1,7 +1,5 @@
 <template>
   <div class="posts-page">
-    <!-- 2) Pass the fetched data to the PostList 
-    component as prop -->
     <PostList :posts = "loadedPosts"/>
   </div>
 </template>
@@ -13,10 +11,6 @@ export default {
   components: {
     PostList
   },
-  /* 1) Fetch data from the server like we did in
-  the main page. (Remember we just use the setTimeout
-  method to simulate the fetching from the server. In
-  a real application we don´t use it.) */
    asyncData(context, callback) {
     setTimeout(() => {
       callback(null, {
