@@ -55,7 +55,8 @@ const createStore = () => {
   });
 };
 
-/* 10) Export the method createStore */
+/* 10) Export the method createStore. I need to stop the
+current local host and start a new one.*/
 export default createStore;
 
 /* 11) Now I can use the store in my pages. 
