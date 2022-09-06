@@ -1,5 +1,6 @@
 <template>
   <div class="posts-page">
+
     <PostList :posts = "loadedPosts"/>
   </div>
 </template>
@@ -11,6 +12,7 @@ export default {
   components: {
     PostList
   },
+
   asyncData(context) {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
@@ -43,6 +45,7 @@ export default {
       context.error(e);
     });
   },
+
   created () {
   this.$store.dispatch("setPosts", this.loadedPosts)
   console.log(this.$store.getters.loadedPosts)

@@ -1,6 +1,7 @@
 
 import Vuex from "vuex";
 
+
 const createStore = () => {
   return new Vuex.Store({
     state: {
@@ -11,7 +12,7 @@ const createStore = () => {
         state.loadedPosts = posts;
       }
     },
-    actions: {
+     actions: {
       setPosts(vuexContext, posts) {
         vuexContext.commit("setPosts", posts);
       }
