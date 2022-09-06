@@ -1,6 +1,8 @@
 <template>
   <div class="posts-page">
-
+    <!-- 7) Send the data fetch from server that
+    is in the store to the PostList component as prop.
+    Next step in _id -->
     <PostList :posts = "loadedPosts"/>
   </div>
 </template>
@@ -12,46 +14,14 @@ export default {
   components: {
     PostList
   },
-
-  asyncData(context) {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-       resolve({
-          loadedPosts: [
-            {
-              id: "1",
-              title: "First Post",
-              previewText: "This is our first post!",
-              thumbnail:
-                "https://static.pexels.com/photos/270348/pexels-photo-270348.jpeg"
-            },
-            {
-              id: "2",
-              title: "Second Post",
-              previewText: "This is our second post!",
-              thumbnail:
-                "https://static.pexels.com/photos/270348/pexels-photo-270348.jpeg"
-            }
-          ]
-        });
-      }, 1000);
- 
-    })
-     
-    .then(data => {
-      return data
-    })
-    .catch(e => {
-      context.error(e);
-    });
-  },
-
-  created () {
-  this.$store.dispatch("setPosts", this.loadedPosts)
-  console.log(this.$store.getters.loadedPosts)
+  /* 6) Get the data fetch from server that is
+  in the store.  */
+  computed: {
+    loadedPosts() {
+      return this.$store.getters.loadedPosts
+    }
   }
 };
-
 </script>
 
 <style scoped>

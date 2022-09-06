@@ -15,7 +15,11 @@
 </template>
 <script>
 export default {
-
+  /* 8) Here we fetch the data from server with asyncData.
+ Even though we have the data in the store, here we need
+ specific data, extra data for a single post. The data 
+ that is in the store is the general data that we are going to 
+ use a lot in many different components.  */
   asyncData(context, callback) {
     setTimeout(() => {
       callback(null, {
